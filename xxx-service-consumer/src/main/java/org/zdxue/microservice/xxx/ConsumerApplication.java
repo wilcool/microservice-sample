@@ -12,7 +12,7 @@ import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
  */
 @SpringBootApplication
 @EnableDubboConfiguration
-@MapperScan("org.zdxue.microservice.xxx.mybatis.mapper")
+@MapperScan("org.zdxue.microservice.xxx.dao")
 @ComponentScan(basePackages = "org.zdxue.microservice.xxx")
 public class ConsumerApplication {
 

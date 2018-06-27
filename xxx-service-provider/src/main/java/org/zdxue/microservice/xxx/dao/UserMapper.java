@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.zdxue.microservice.xxx.mybatis.mapper;
+package org.zdxue.microservice.xxx.dao;
 
 import org.apache.ibatis.annotations.Select;
 import org.zdxue.microservice.xxx.model.User;

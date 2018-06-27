@@ -42,8 +42,6 @@
         <dubbo-spring-boot-starter.version>2.0.0</dubbo-spring-boot-starter.version>
         <zkclient.version>0.10</zkclient.version>
         <commons-lang3.version>3.4</commons-lang3.version>
-        <commons-pool2.version>2.4.2</commons-pool2.version>
-        <jedis.version>2.9.0</jedis.version>
         <mysql-connector-java.version>5.1.46</mysql-connector-java.version>
         <druid.version>1.1.10</druid.version>
         <mybatis.version>3.4.6</mybatis.version>
@@ -57,18 +55,6 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>${commons-pool2.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>redis.clients</groupId>
-                <artifactId>jedis</artifactId>
-                <version>${jedis.version}</version>
             </dependency>
 
             <dependency>

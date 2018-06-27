@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.zdxue.microservice.xxx.mybatis.mapper;
+package org.zdxue.microservice.xxx.dao;
 
 import org.zdxue.microservice.xxx.model.Ticket;
 
