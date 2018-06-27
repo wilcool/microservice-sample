@@ -1,7 +1,9 @@
 package org.zdxue.microservice.xxx;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 
@@ -10,9 +12,11 @@ import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
  */
 @SpringBootApplication
 @EnableDubboConfiguration
+@MapperScan("org.zdxue.microservice.xxx.mybatis.mapper")
+@ComponentScan(basePackages = "org.zdxue.microservice.xxx")
 public class ProviderApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProviderApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ProviderApplication.class, args);
+    }
 }
