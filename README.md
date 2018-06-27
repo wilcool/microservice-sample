@@ -1,4 +1,9 @@
 # microservice-sample
-with 
-	spring boot 2.0.3
-	dubbo 2.6
+
+- spring boot 2.0.3
+- dubbo 2.6
+- jedis 2.9
+- mysql-connector-java 5.1.46
+- druid 1.1.10
+- mybatis 3.4.6
+- fastjson 1.2.47
