@@ -1,0 +1,33 @@
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    
+    <property name="maxHistory" value="30" />
+    <property name="maxFileSize" value="20MB" />
+    
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger : %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="root_logger_appender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/all-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger : %msg%n</pattern>
+        </encoder>
+    </appender>
+   
+    <!-- 全局配置， 可供其它logger继承(additivity=false时不叠加到root) -->
+    <root level="info" additivity="false">
+        <appender-ref ref="root_logger_appender" />
+    </root>
+    
+    <logger name="org.zdxue.microservice" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="root_logger_appender" />
+    </logger>
+    
+</configuration>
