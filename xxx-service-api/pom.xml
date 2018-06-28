@@ -13,12 +13,4 @@
     <artifactId>xxx-service-api</artifactId>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.zdxue.microservice</groupId>
-            <artifactId>xxx-model</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
-
 </project>

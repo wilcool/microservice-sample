@@ -124,7 +124,6 @@
         <module>xxx-service-consumer</module>
         <module>xxx-service-provider</module>
         <module>xxx-service-api</module>
-        <module>xxx-model</module>
         <module>xxx-common</module>
     </modules>
 </project>

@@ -21,11 +21,9 @@
     </appender>
    
     <!-- 全局配置， 可供其它logger继承(additivity=false时不叠加到root) -->
-    <root level="ERROR" additivity="false">
+    <root level="info" additivity="false">
         <appender-ref ref="root_logger_appender" />
     </root>
-    
-    <logger name="org.springframework.boot.context.embedded.undertow" level="INFO" additivity="false" />
     
     <logger name="org.zdxue.microservice" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT" />
