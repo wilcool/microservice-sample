@@ -1,0 +1,97 @@
+<assembly
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+
+    <id>release</id>
+
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+
+    <includeBaseDirectory>true</includeBaseDirectory>
+
+    <fileSets>
+        <!-- dist dir -->
+        <fileSet>
+            <outputDirectory>dist</outputDirectory>
+            <directory>${basedir}/xxx-schedule/target/</directory>
+            <includes>
+                <include>xxx-schedule-0.0.1-SNAPSHOT.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>dist</outputDirectory>
+            <directory>${basedir}/xxx-service-consumer/target/</directory>
+            <includes>
+                <include>xxx-service-consumer-0.0.1-SNAPSHOT.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>dist</outputDirectory>
+            <directory>${basedir}/xxx-service-provider/target/</directory>
+            <includes>
+                <include>xxx-service-provider-0.0.1-SNAPSHOT.jar</include>
+            </includes>
+        </fileSet>
+
+        <!-- src dir -->
+        <fileSet>
+            <outputDirectory>src</outputDirectory>
+            <directory>${basedir}/xxx-common/target/</directory>
+            <includes>
+                <include>xxx-common-*-sources.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>src</outputDirectory>
+            <directory>${basedir}/xxx-schedule/target/</directory>
+            <includes>
+                <include>xxx-schedule-*-sources.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>src</outputDirectory>
+            <directory>${basedir}/xxx-service-api/target/</directory>
+            <includes>
+                <include>xxx-service-api-*-sources.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>src</outputDirectory>
+            <directory>${basedir}/xxx-service-consumer/target/</directory>
+            <includes>
+                <include>xxx-service-consumer-*-sources.jar</include>
+            </includes>
+        </fileSet>
+
+        <fileSet>
+            <outputDirectory>src</outputDirectory>
+            <directory>${basedir}/xxx-service-provider/target/</directory>
+            <includes>
+                <include>xxx-service-provider-*-sources.jar</include>
+            </includes>
+        </fileSet>
+
+        <!-- docs dir -->
+        <fileSet>
+            <outputDirectory>dist-docs</outputDirectory>
+            <directory>${basedir}/docs/</directory>
+        </fileSet>
+        
+        <!-- bin dir -->
+        <fileSet>
+            <outputDirectory>bin</outputDirectory>
+            <directory>${basedir}/</directory>
+            <includes>
+                <include>start-*.sh</include>
+            </includes>
+        </fileSet>
+
+    </fileSets>
+</assembly>
