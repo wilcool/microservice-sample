@@ -17,7 +17,8 @@ import com.alibaba.dubbo.config.annotation.Reference;
 @RestController
 public class TicketController {
 
-    @Reference(url = "dubbo://127.0.0.1:20881")
+    // @Reference(url = "dubbo://127.0.0.1:20881")
+    @Reference(registry = { "zkReg" })
     private UserService userService;
 
     @Autowired
